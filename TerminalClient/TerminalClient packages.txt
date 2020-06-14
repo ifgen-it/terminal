@@ -1,0 +1,4 @@
+Packages:
+
+- for mapping object from JSON to Object:
+Install-Package Microsoft.AspNet.WebApi.Client

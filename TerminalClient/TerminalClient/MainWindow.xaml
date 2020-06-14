@@ -1,0 +1,27 @@
+﻿<Window x:Class="TerminalClient.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TerminalClient"
+        mc:Ignorable="d"
+        Title="Terminal Client" Height="349" Width="800" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <Grid>
+        <Label Content="Name" HorizontalAlignment="Left" Margin="41,70,0,0" VerticalAlignment="Top"/>
+        <Label Content="Amount" HorizontalAlignment="Left" Margin="41,119,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="tb_Name" HorizontalAlignment="Left" Margin="126,70,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="176"/>
+        <TextBox x:Name="tb_Amount" HorizontalAlignment="Left" Margin="126,121,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="176"/>
+        <Button x:Name="btn_Add" Content="Add product" HorizontalAlignment="Left" Margin="41,185,0,0" VerticalAlignment="Top" Width="261"/>
+        <Label Content="Added products" HorizontalAlignment="Left" Margin="372,23,0,0" VerticalAlignment="Top" Width="146"/>
+        <DataGrid x:Name="dg_Products" AutoGenerateColumns="False" HorizontalAlignment="Left" Height="143" VerticalAlignment="Top" Width="380" Margin="372,70,0,0">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Name" Binding="{Binding Path=Name}" Width="255"/>
+                <DataGridTextColumn Header="Amount" Binding="{Binding Path=Amount}" Width="115"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button x:Name="btn_UploadProducts" Content="Upload products" HorizontalAlignment="Left" Margin="372,239,0,0" VerticalAlignment="Top" Width="380"/>
+        <Label x:Name="lbl_Status" Content="Status :" HorizontalAlignment="Left" Margin="372,276,0,0" VerticalAlignment="Top" Width="323"/>
+        <Label Content="New product" HorizontalAlignment="Left" Margin="41,23,0,0" VerticalAlignment="Top" Width="101"/>
+
+    </Grid>
+</Window>
